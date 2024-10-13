@@ -43,7 +43,7 @@ then switched to Google Firestore (a NoSQL database) for the web version.
 - Implementing web forms in Flask/Python.
 - Bootstrap 5.3.3 but keeping styling real simple. 
 
-## Tools I've used:
+## Tools I've used (tech stack):
 - Python
 - Flask/Jinja
 - HTML/CSS/Bootstrap
@@ -51,6 +51,3 @@ then switched to Google Firestore (a NoSQL database) for the web version.
 - Google AppEngine
 - PorkBun/CloudFlare
 - git/GitHub
-
-## License: 
-MIT
