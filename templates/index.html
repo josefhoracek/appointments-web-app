@@ -1,0 +1,14 @@
+{% extends "parent.html" %}
+
+{% block content %}
+    <h6>{{ message }}</h6>
+    <form action="{{ url_for('client_details') }}" method="post">
+        {% for time_slot in availability %}
+        <div class="mb-1">
+            <button type="submit" class="btn btn-outline-dark btn-wide" 
+                name="selected_id" value="{{ time_slot[0] }}">{{ time_slot[1] }}
+            </button>
+        </div>
+        {% endfor %}
+    </form>
+{% endblock %}

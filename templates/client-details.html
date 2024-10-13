@@ -1,0 +1,36 @@
+{% extends "parent.html" %}
+
+{% block content %}
+    <h4>{{ selected_timeslot[1] }}</h4>
+    <form action="{{ url_for('confirm') }}" method="post">
+        <div class="mb-2">
+            <label for="first_name">First name</label>
+            <input type="text" class="form-control" id="first_name" name="first_name" required>
+        </div>
+        <div class="mb-2">
+            <label for="last_name">Last name</label>
+            <input type="text" class="form-control" id="last_name" name="last_name" required>
+        </div>
+        <div class="mb-2">
+            <label for="email">Email</label>
+            <input type="email" class="form-control" id="email" name="email" required>
+        </div>
+        <div class="mb-2">
+            <label for="purpose">Purpose</label>
+            <select class="form-control" id="purpose" name="purpose" required>
+                <option value="Distinguished Communicator">Distinguished Communicator</option>
+                <option value="other">other</option>
+            </select>
+        </div>
+        <div class="mb-2">
+            <label for="format">Format</label>
+            <select class="form-control" id="format" name="format" required>
+                <option value="in-person">in-person</option>
+                <option value="remote">remote</option>
+            </select>
+        </div>
+        <div class="mb-3"></div>
+            <button type="submit" class="btn btn-outline-dark">Submit</button>
+        </div>
+    </form>
+{% endblock %}

@@ -1,0 +1,8 @@
+__pycache__/
+venv/
+.gcloudignore
+.gitignore
+.git
+.flaskenv
+notes.txt
+firebase_manage.py

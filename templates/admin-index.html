@@ -1,0 +1,12 @@
+{% extends "parent.html" %}
+
+{% block content %}
+    <div class="mb-1">    
+        <a class="btn btn-outline-dark btn-wide" 
+            href="{{ url_for('current_appointments') }}">View appointments</a>
+    </div>
+    <div class="mb-1">
+        <a class="btn btn-outline-dark btn-wide"
+            href="{{ url_for('manage_availability') }}">Manage availability</a>
+    </div>
+{% endblock %}

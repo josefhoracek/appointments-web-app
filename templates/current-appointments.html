@@ -1,0 +1,29 @@
+{% extends "parent.html" %}
+
+{% block content %}
+    <h6>{{ message }}</h6>
+    {% for appointment in appointments %}
+        <div class="h-100 p-2 bg-body-tertiary border rounded-3">
+            <h4>{{ appointment['time'] }}</h4>
+            <br>
+            <div><strong>{{ appointment['firstname'] }} 
+                {{ appointment['lastname'] }}</strong>
+                ({{ appointment['email'] }})
+            </div>
+            <div>Purpose: {{ appointment['purpose'] }}</div>
+            <div>Format: {{ appointment['format'] }}</div>
+            <div>Duration: 30 minutes</div>
+        </div>
+        <br>
+    {% endfor %}
+    <div class="d-flex justify-content-between gray">
+        <div>
+            <a class="link" href="{{ url_for('previous_appointments') }}">< previous</a>
+        </div>
+        <div>
+            {% if not last_page %}
+                <a class="link" href="{{ url_for('current_appointments') }}">next ></a>
+            {% endif %}
+        </div>
+    </div>
+{% endblock %}

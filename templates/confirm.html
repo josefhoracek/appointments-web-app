@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+{% extends "parent.html" %}
+
+{% block content %}
+    <h6>{{ first_name }}, your appointment has been scheduled.</h6>
+    <div class="h-100 p-5 bg-body-tertiary border rounded-3">
+        <h4>{{ time }}</h4>
+        <br>
+        <p>Purpose: {{ purpose }}</p>
+        <p>Format: {{ format }}</p>
+        <p>Duration: 30 minutes</p>
+    </div>
+    <br>
+    <p>Please add the appointment to your calendar. If you need to cancel or reschedule, email me.</p>
+    <p>In-person meetings take place in Studio 151 (Charles E. Coates Hall, room 151). Ask for me at the front desk.</p>
+    <p>Remote meetings take place via Zoom. I will email you a link.</p>
+{% endblock %}
